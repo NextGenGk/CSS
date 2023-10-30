@@ -199,3 +199,109 @@ margin-bottom
 margin-left
 
 /* Cascade */
+Cascade :
+
+The cascade defines the origin and layer that takes precedence when declarations in more than one origin or cascade layer set a value for a property on an element.
+
+The cascade lies at the core of CSS, as emphasized by the name: Cascading Style Sheets. When a selector matches an element, the property value from the origin with the highest precedence gets applied, even if the selector from a lower precedence origin or layer has greater specificity.
+
+Categories :
+1. Position :
+
+li {									Precedence
+	color : red;							1
+	color: blue;							2	// this color is applied
+}
+
+2. Specificity :							Precedence
+li {color: blue;}							1
+.first-class {color : red};					2
+li[draggable] {color: purple}				3
+#first-Id {color: orange}					4				// this color is applied
+
+3. Type :
+
+<link rel="stylesheet" href="style.css">	// Exteranl CSS
+<style></style>								// Internal CSS
+<h1 style="color:red">Hello world</h1>		// Inline CSS
+
+CSS 									Precedence
+Exteranl CSS								1
+Internal CSS								2
+Inline CSS									3 
+
+4. Importance
+li {
+	color: red;	!important	// this color is applied, because we specify the importance keyboard after the element
+	color: blue; 	
+}
+
+/* Cascade Precedence*/
+CSS Categories							Precedence
+Position									1
+Specificity									2
+Type										3
+Importance									4
+
+/* Combining CSS Selectors */
+1. Group Selector : Apply to both selectors
+
+Syntax : Use ( , )
+selector, selector {
+	color: blue;
+}
+
+Example :
+h1, p {
+	color: blue;
+}
+
+Note : We can use, all types of selectors like, element selector, Id selector, Class Selector, Attribute Selector
+
+2. Child Selector : Apply to direct child of left side
+
+Syntax : Use ( > )
+sleector > selector {
+	color: firebrick;
+}
+
+Example :
+.box > h1 {
+	background-color: cyan;
+}
+
+3. Descendent Selector : Apply to a descendent of left side
+
+Syntax : Use ( space )
+selector selector {
+	color: blue;
+}
+
+Example :
+.box li {
+    color: green;
+}
+
+4. Chaining Selector : Apply where all selectors are true
+
+Syntax: Use (No space between selectors)
+selectorselector {
+	color : cyan;
+}
+
+Example :
+h1#title.big.heading {
+	color: cyan;
+}
+
+5. Combining Combiners : Combining all selectors in one
+
+Syntax: Use ( space )
+selector selectorselector {
+	font-size : 0.5rem;
+}
+
+Example :
+ul > p.done {
+    font-size: 0.5rem;
+}
