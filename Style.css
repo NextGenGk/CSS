@@ -305,3 +305,74 @@ Example :
 ul > p.done {
     font-size: 0.5rem;
 }
+
+/* CSS Positioning */
+Static
+Relative
+Absolute
+z-index
+Fixed
+
+1. Static : HTML default flow.
+
+2. Relative : Position relative to the default position.
+(Relative positioning takes the static position and then you can move it relative to that location).
+
+3. Absolute : Position relative to the nearest positioned ancestor or top left corner of the webpage.
+
+4. z-Index : The z-index property specifies the stack order of an element.
+An element with greater stack order is always in front of an element with a lower stack order.
+
+Note: z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky) and flex items (elements that are direct children of display:flex elements).
+
+5. Fixed : Position relative or top left corner of the browser window.
+
+Learn Positioning : https://appbrewery.github.io/css-positioning/
+
+/* Media Query */
+It is used for create a responsive website
+
+/* Max-Width */
+Syntax : 
+@media (max-width: 600px)
+   h1 {
+	font-size : 20px;
+   }
+}
+
+Means : Anything that is less than or equal to given size then, the given styling is used inside the curly brackets.
+
+max-width : less than or equal to given size 
+Eg : max-width 600px
+Means: O to <= 600, then the given styling is applied on the code.
+
+/* Min-Width */
+Suntax :
+@media (min-width: 600px)
+   h1 {
+	font-size : 20px;
+   }
+}
+
+Means : Anything that is greater than to the given size then, the given styling is used inside the curly brackets.
+
+min-width : greater than or equal to given size 
+Eg : min-width 600px
+Means: 600 to <= 992, then the given styling is applied on the code.
+
+/* Combine multiple medis queries */
+Syntax :
+@media (min-width : 600px) and (max-width : 1240px) {
+	/* Styles applied for screen between 600px to 1240px */
+}
+
+Syntax :
+@media (max-width : 600px) and (min-width : 1240px) {
+	/* Styles applied for screen between less than 600px & greater than 1240px */
+}
+
+/* Device */
+Syntax :
+@media screen (orientation : landscape) {
+	/* Styles applied for landscape orientation*/
+}
