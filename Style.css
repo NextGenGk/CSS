@@ -376,3 +376,8 @@ Syntax :
 @media screen (orientation : landscape) {
 	/* Styles applied for landscape orientation*/
 }
+
+/* Display Properties */
+inline : elements can go on the same line
+Block : set height and width
+inline-Block : elements can go on the same line + set height and width
