@@ -409,4 +409,18 @@ display: flex;
 The flex container becomes flexible by setting the display property to flex
 
 display: inline-flex
-same as inline block
+Same as inline block
+
+/* Flex Direction */
+The flex-direction property specifies the direction of the flexible items.
+
+row : Default value. The flexible items are displayed horizontally, as a row	
+row-reverse : Same as row, but in reverse order	
+column : The flexible items are displayed vertically, as a column	
+column-reverse : Same as column, but in reverse order
+
+flex-basis is added only in the child.
+
+Reference :
+https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors
+https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators
