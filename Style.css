@@ -544,3 +544,36 @@ Specifies participation in first- or last-baseline alignment: aligns the alignme
 
 stretch : 
 If the combined size of the items along the cross axis is less than the size of the alignment container and the item is auto-sized, its size is increased equally (not proportionally), while still respecting the constraints imposed by max-height/max-width (or equivalent functionality), so that the combined size of all auto-sized items exactly fills the alignment container along the cross axis.
+
+/* Flex Sizing */
+Priority List 
+
+Content Width < Width < flex-basis < min-width/max-width
+    		100px   fex-basis:200px 
+
+min-width : The max width looks at the (longest possible word) of the text
+(The maximum width determines how big each of the items can "shrink" to)
+
+max-width : The max width looks at the (longest possible line) of the text
+(The maximum width determines how big each of the items can "grow" to)
+
+Flex-basis :
+The flex-basis property specifies the initial size of the flex item before any space distribution happens. The initial value for this property is auto. If flex-basis is set to auto then to work out the initial size of the item the browser first checks if the main size of the item has an absolute size set. This would be the case if you had given your item a width of 200 pixels. In that case 200px would be the flex-basis for this item.
+
+If your item is instead auto-sized, then auto resolves to the size of its content. At this point your knowledge of min- and max-content sizing becomes useful, as flexbox will take the max-content size of the item as the flex-basis. The following live example can help to demonstrate this.
+
+Flex-grow :
+The flex-grow property specifies the flex grow factor, which determines how much the flex item will grow relative to the rest of the flex items in the flex container when the positive free space is distributed.
+
+If all of your items have the same flex-grow factor then space will be distributed evenly between all of them. If this is the situation that you want then typically you would use 1 as the value, however you could give them all a flex-grow of 88, or 100, or 1.2 if you like — it is a ratio. If the factor is the same for all, and there is positive free space in the flex container then it will be distributed equally to all.
+
+Flex-shrik :
+The flex-shrink property specifies the flex shrink factor, which determines how much the flex item will shrink relative to the rest of the flex items in the flex container when negative free space is distributed.
+
+This property deals with situations where the browser calculates the flex-basis values of the flex items, and finds that they are too large to fit into the flex container. As long as flex-shrink has a positive value the items will shrink in order that they do not overflow the container.
+
+So where flex-grow deals with adding available space, flex-shrink manages taking away space to make boxes fit into their container without overflowing.
+
+Short Hand Property : 
+flex : 1 1 0
+grow shrink basis
