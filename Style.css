@@ -577,3 +577,7 @@ So where flex-grow deals with adding available space, flex-shrink manages taking
 Short Hand Property : 
 flex : 1 1 0
 grow shrink basis
+
+/* Grid Layout */
+The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning.
+
