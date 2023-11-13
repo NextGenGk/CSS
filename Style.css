@@ -581,3 +581,12 @@ grow shrink basis
 /* Grid Layout */
 The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning.
 
+/* Grid Sizing */
+grid-template-rows :
+The grid-template-rows CSS property defines the line names and track sizing functions of the grid rows.
+
+grid-template-columns :
+The grid-template-columns CSS property defines the line names and track sizing functions of the grid columns.
+
+grid-auto-rows :
+The grid-auto-rows CSS property specifies the size of an implicitly-created grid row track or pattern of tracks.
